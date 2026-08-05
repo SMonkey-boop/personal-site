@@ -1,29 +1,21 @@
 export default function Contact({ profile }) {
   return (
     <section id="contact" className="section contact">
-      <h2 className="section-cmd">
-        <span className="prompt">$</span> ./contact.sh
-      </h2>
-      <ul className="contact-list">
-        <li>
-          <span className="contact-label">phone</span>
-          <a href={`tel:${profile.phone}`}>{profile.phone}</a>
-        </li>
-        <li>
-          <span className="contact-label">email</span>
-          <a href={`mailto:${profile.email}`}>{profile.email}</a>
-        </li>
-        <li>
-          <span className="contact-label">github</span>
-          <a href={profile.github} target="_blank" rel="noreferrer">
-            {profile.githubUser}
-          </a>
-        </li>
-      </ul>
+      <h2 className="section-title">联系</h2>
+      <div className="card">
+        <ul className="contact-list">
+          <li>
+            <span className="contact-label">电话</span>
+            <a href={`tel:${profile.phone}`}>{profile.phone}</a>
+          </li>
+          <li>
+            <span className="contact-label">邮箱</span>
+            <a href={`mailto:${profile.email}`}>{profile.email}</a>
+          </li>
+        </ul>
+      </div>
       <footer className="site-footer">
-        <p>
-          <span className="prompt">➜</span> exit 0 · © {new Date().getFullYear()} {profile.name}
-        </p>
+        <p>© {new Date().getFullYear()} {profile.name}</p>
       </footer>
     </section>
   )

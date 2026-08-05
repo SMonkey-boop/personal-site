@@ -7,8 +7,6 @@ export const profile = {
   target: 'Android 工程师、大前端开发',
   phone: '18217616652',
   email: 'sicmi929@163.com',
-  github: 'https://github.com/SMonkey-boop',
-  githubUser: 'SMonkey-boop',
 
   skills: [
     '10 年移动开发，多端能力：Android App / H5 / 微信小程序',

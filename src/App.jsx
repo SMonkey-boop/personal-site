@@ -8,16 +8,16 @@ import Contact from './components/Contact.jsx'
 
 export default function App() {
   return (
-    <>
-      <div className="crt" aria-hidden="true" />
-      <Nav name={profile.handle} />
-      <main className="terminal">
+    <div className="page">
+      <div className="page-glow" aria-hidden="true" />
+      <Nav name={profile.name} />
+      <main className="site">
         <Hero profile={profile} />
         <Skills skills={profile.skills} stack={profile.stack} />
         <Experience items={profile.experience} />
         <Education education={profile.education} />
         <Contact profile={profile} />
       </main>
-    </>
+    </div>
   )
 }
