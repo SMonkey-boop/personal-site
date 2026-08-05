@@ -2,7 +2,7 @@ export const profile = {
   name: '杨声明',
   handle: 'sicmi',
   title: 'Android / 大前端',
-  tagline: '10 年移动与跨端经验 · APM / 性能 / AI-Coding',
+  tagline: 'Android 原生开发 · React Native 跨端 · AI-Coding 提效交付',
   status: '在职',
   target: 'Android 工程师、大前端开发',
   phone: '18217616652',
