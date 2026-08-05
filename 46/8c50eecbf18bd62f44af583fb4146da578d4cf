@@ -1,0 +1,23 @@
+.gitignore
+  s_970ce80691a733::t_d8eabf69135152 1-4
+.github/workflows/deploy.yml
+  s_970ce80691a733::t_0897fa7c12404a 1-2,24-32,37-38
+vite.config.js
+  s_970ce80691a733::t_7883500a62fbba 6,8
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.39-trip",
+  "base_commit_sha": "468c50eecbf18bd62f44af583fb4146da578d4cf",
+  "prompts": {},
+  "sessions": {
+    "s_970ce80691a733": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "d79d9dde-f28c-4007-897e-404b13799efc",
+        "model": "default"
+      },
+      "human_author": "yangshengming <shengmingyang@trip.com>"
+    }
+  }
+}
