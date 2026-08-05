@@ -7,8 +7,8 @@ export default function Hero({ profile }) {
             className="hero-avatar"
             src={profile.avatar}
             alt={`${profile.name}的头像`}
-            width={120}
-            height={160}
+            width={497}
+            height={640}
           />
           <div className="hero-copy">
             <p className="hero-eyebrow">{profile.title}</p>
