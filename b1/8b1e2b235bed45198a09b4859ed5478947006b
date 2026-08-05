@@ -1,0 +1,22 @@
+src/components/Hero.jsx
+  s_970ce80691a733::t_7450a9e6d77011 10-11
+src/styles/global.css
+  s_970ce80691a733::t_2c91fe2e91963f 546
+  s_970ce80691a733::t_0b34d28da77450 178-180,182-183,186
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.39-trip",
+  "base_commit_sha": "b18b1e2b235bed45198a09b4859ed5478947006b",
+  "prompts": {},
+  "sessions": {
+    "s_970ce80691a733": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "d79d9dde-f28c-4007-897e-404b13799efc",
+        "model": "default"
+      },
+      "human_author": "yangshengming <shengmingyang@trip.com>"
+    }
+  }
+}
