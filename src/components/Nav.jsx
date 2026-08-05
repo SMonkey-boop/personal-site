@@ -1,7 +1,8 @@
 const links = [
   { href: '#about', label: '关于' },
   { href: '#skills', label: '能力' },
-  { href: '#experience', label: '经历' },
+  { href: '#experience', label: '工作' },
+  { href: '#projects', label: '项目' },
   { href: '#edu', label: '教育' },
   { href: '#contact', label: '联系' },
 ]
