@@ -1,0 +1,9 @@
+src/data/profile.js
+  ai_agent 6
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.39-trip",
+  "base_commit_sha": "0cc3d2c33436639c0aea70bc634ff0563229cd09",
+  "prompts": {}
+}
