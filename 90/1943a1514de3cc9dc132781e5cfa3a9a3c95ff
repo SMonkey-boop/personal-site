@@ -1,0 +1,19 @@
+src/data/profile.js
+  s_970ce80691a733::t_c48971ab92feb1 5
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.39-trip",
+  "base_commit_sha": "901943a1514de3cc9dc132781e5cfa3a9a3c95ff",
+  "prompts": {},
+  "sessions": {
+    "s_970ce80691a733": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "d79d9dde-f28c-4007-897e-404b13799efc",
+        "model": "default"
+      },
+      "human_author": "yangshengming <shengmingyang@trip.com>"
+    }
+  }
+}
