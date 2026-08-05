@@ -3,7 +3,7 @@ export const profile = {
   handle: 'sicmi',
   title: '资深前端开发',
   tagline: 'Android 原生开发 · React Native 跨端 · AI-Coding 提效交付',
-  avatar: `${import.meta.env.BASE_URL}avatar.png`,
+  avatar: `${import.meta.env.BASE_URL}avatar.png?v=2`,
   status: '在职',
   target: 'Android 工程师、大前端开发',
   phone: '18217616652',
