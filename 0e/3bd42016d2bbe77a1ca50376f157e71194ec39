@@ -1,0 +1,20 @@
+src/data/profile.js
+  s_970ce80691a733::t_a727efdf401203 63-64
+  s_970ce80691a733::t_00a569b86da17f 278,280,282-287
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.39-trip",
+  "base_commit_sha": "0e3bd42016d2bbe77a1ca50376f157e71194ec39",
+  "prompts": {},
+  "sessions": {
+    "s_970ce80691a733": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "d79d9dde-f28c-4007-897e-404b13799efc",
+        "model": "default"
+      },
+      "human_author": "yangshengming <shengmingyang@trip.com>"
+    }
+  }
+}
