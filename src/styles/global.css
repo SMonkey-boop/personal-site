@@ -325,6 +325,39 @@ p {
   padding: 1rem 1.15rem;
 }
 
+.project-main.has-shot,
+.project-summary-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.project-body,
+.project-summary-row .project-summary {
+  flex: 1;
+  min-width: 0;
+}
+
+.project-summary-row .project-summary {
+  margin-bottom: 0;
+}
+
+.project-summary-row .project-shot.is-wide {
+  flex: 0 0 13rem;
+  width: 13rem;
+}
+
+.project-summary-row .project-shot img {
+  max-height: 8.25rem;
+  object-fit: contain;
+  object-position: top right;
+  background: #111;
+}
+
+.project-summary-row + .project-highlights {
+  margin-top: 0.65rem;
+}
+
 .xp-head,
 .project-head {
   display: flex;
@@ -392,6 +425,193 @@ p {
   color: var(--faint);
 }
 
+.project-highlights-wrap {
+  overflow: auto;
+  padding-top: 0.65rem;
+  border-top: 1px solid var(--line);
+}
+
+.project-shot {
+  flex: 0 0 8.5rem;
+  margin: 0;
+  width: 8.5rem;
+}
+
+.project-shot.is-wide {
+  flex: 0 0 min(16rem, 42%);
+  width: min(16rem, 42%);
+}
+
+.project-shot.is-float {
+  float: right;
+  flex: none;
+  margin: 0 0 0.5rem 0.85rem;
+}
+
+.project-shot.is-float.is-wide {
+  width: min(14rem, 46%);
+}
+
+.project-shot-btn {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+  cursor: zoom-in;
+  border-radius: 0.5rem;
+  transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
+}
+
+.project-shot-btn:hover,
+.project-shot-btn:focus-visible {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.14);
+  outline: none;
+}
+
+.project-shot-btn:focus-visible {
+  box-shadow:
+    0 0 0 2px #fff,
+    0 0 0 4px var(--accent),
+    0 8px 20px rgba(0, 0, 0, 0.14);
+}
+
+.project-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  border: 1px solid var(--line);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: border-color 0.25s var(--ease);
+}
+
+.project-shot-btn:hover img,
+.project-shot-btn:focus-visible img {
+  border-color: rgba(0, 113, 227, 0.35);
+}
+
+.image-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  padding: 1.25rem;
+  background: rgba(15, 17, 21, 0.72);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  animation: lightbox-in 0.28s var(--ease) both;
+}
+
+.image-lightbox.is-closing {
+  animation: lightbox-out 0.22s var(--ease) both;
+  pointer-events: none;
+}
+
+.image-lightbox-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.65rem;
+  max-width: min(92vw, 28rem);
+  max-height: calc(100vh - 2.5rem);
+  animation: lightbox-zoom-in 0.32s var(--ease) both;
+}
+
+.image-lightbox-panel.is-wide {
+  max-width: min(94vw, 56rem);
+}
+
+.image-lightbox.is-closing .image-lightbox-panel {
+  animation: lightbox-zoom-out 0.22s var(--ease) both;
+}
+
+.image-lightbox-title {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.image-lightbox-panel img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  max-height: calc(100vh - 5.5rem);
+  height: auto;
+  border-radius: 0.75rem;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.35);
+  background: #0f1115;
+}
+
+.image-lightbox-close {
+  position: absolute;
+  top: 0.85rem;
+  right: 0.85rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: none;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s var(--ease), transform 0.2s var(--ease);
+}
+
+.image-lightbox-close:hover,
+.image-lightbox-close:focus-visible {
+  background: rgba(255, 255, 255, 0.22);
+  transform: scale(1.05);
+  outline: none;
+}
+
+@keyframes lightbox-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes lightbox-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes lightbox-zoom-in {
+  from {
+    opacity: 0;
+    transform: scale(0.88) translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes lightbox-zoom-out {
+  from {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.92) translateY(6px);
+  }
+}
+
 .project-tech {
   display: flex;
   flex-wrap: wrap;
@@ -419,6 +639,12 @@ p {
 .project-highlights {
   padding-top: 0.65rem;
   border-top: 1px solid var(--line);
+}
+
+.project-highlights-wrap .project-highlights {
+  margin: 0;
+  padding-top: 0;
+  border-top: none;
 }
 
 .project-highlights li::before {

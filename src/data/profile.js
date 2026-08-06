@@ -80,6 +80,8 @@ export const profile = {
       org: '携程旅行',
       period: '2020/09 – 至今',
       role: '资深前端开发',
+      image: `${import.meta.env.BASE_URL}projects/t-group-tour-home.png`,
+      imageAlt: 'T 站跟团 / 私家团业务线首页截图',
       tech: [
         'Android',
         'Native',
@@ -104,6 +106,8 @@ export const profile = {
       org: '携程旅行',
       period: '2020/09 – 至今',
       role: '资深前端开发',
+      image: `${import.meta.env.BASE_URL}projects/c-vacation-home.png`,
+      imageAlt: '携程 C 站度假业务线首页截图',
       tech: ['Android', 'React Native', 'diff 配置', 'Native 动效'],
       summary:
         '负责国内 C 站度假首页多 Tab 容器开发与迭代：容器内嵌 RN，支持 diff 配置与 Native 动效，承接门票、跟团、滑雪等多业务首页形态。',
@@ -119,6 +123,9 @@ export const profile = {
       org: '携程旅行',
       period: '2020/09 – 至今',
       role: '资深前端开发',
+      image: `${import.meta.env.BASE_URL}projects/search-list.png`,
+      imageAlt: '度假搜索列表页截图',
+      imageAlign: 'highlights',
       tech: ['Android', 'iOS', 'JS', 'CRN', 'H5', 'Native 组件'],
       summary:
         '主导 C&T 站搜索 Native 端组件业务，构建稳定可靠的搜索体验。列表容器内嵌各业务列表（CRN、H5）。技术覆盖 Android、iOS、JS 三端。',
@@ -140,6 +147,8 @@ export const profile = {
       org: '携程旅行',
       period: '2020/09 – 至今',
       role: '资深前端开发',
+      image: `${import.meta.env.BASE_URL}projects/t-cruise-home.png`,
+      imageAlt: 'T 站邮轮首页截图',
       tech: ['xTaro', '多端'],
       summary:
         '独立开发与维护邮轮首页，使用 xTaro 框架实现多端交付。',
@@ -153,6 +162,10 @@ export const profile = {
       org: '携程旅行',
       period: '2020/09 – 至今',
       role: '资深前端开发',
+      image: `${import.meta.env.BASE_URL}projects/vai-fe.png`,
+      imageAlt: 'vai-fe 前端 AI Coding 测试流水线文档站截图',
+      imageWide: true,
+      imageAlign: 'summary',
       tech: [
         'Android',
         'Kotlin',
