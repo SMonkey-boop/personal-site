@@ -1,0 +1,49 @@
+src/components/Experience.jsx
+  s_126b20a755b0d0::t_6e414103983824 1-2,4-5,8
+src/components/Skills.jsx
+  s_126b20a755b0d0::t_f5886ef2c17056 1-2,4-5,8,10
+src/data/profiles.js
+  s_126b20a755b0d0::t_38f46e8a7459ed 1-7
+src/data/profile.en.js
+  s_126b20a755b0d0::t_d6bf8cfc22d368 2,4-5,7-8,13-19,30,39-41,43-46,50-51,54-55,59-60,63-65,69-70,73,80-83,85,90-94,97,99-102,106-109,111-112,114,116-119,123-126,128,130,132,134-143,147-150,152-153,155,157-158,162-165,167,183,185-197,201-204,207,209-213,217-218,220-221,223,225-228,232-233,235-236,238,240-242,246-247,249,262,264-270,274-275,277-278,280,282-287,291-292,294,306,309,311-315,319-320,322,326,332-333,336,338-341,348-351
+src/components/Education.jsx
+  s_126b20a755b0d0::t_8e0adf4ae6108e 1-2,4-5,8,20
+src/App.jsx
+  s_126b20a755b0d0::t_2c8889d3ddc3e2 1,11-12
+src/main.jsx
+  s_126b20a755b0d0::t_28fc7b03011f4a 3,9-11
+src/components/Contact.jsx
+  s_126b20a755b0d0::t_beee0117431532 1-2,4-5,8,12,16,22-24,28
+src/i18n/messages.js
+  s_126b20a755b0d0::t_e5e0b0e464786b 1-97
+src/components/Nav.jsx
+  s_126b20a755b0d0::t_535c50cac1ead1 1,5-13,19-35
+  s_126b20a755b0d0::t_802a19a95a9337 4
+src/components/Projects.jsx
+  s_126b20a755b0d0::t_cabd716b1c7597 3,5,8,16,18,40,59,78,97,137,159,162-167,173,180-184,195,199-203,217
+src/components/Hero.jsx
+  s_126b20a755b0d0::t_7c7d5f6bf2d5ef 1-2,4-5,13,23,26
+src/i18n/LocaleContext.jsx
+  s_126b20a755b0d0::t_43d497f9da3e15 21
+  s_126b20a755b0d0::t_38d74c7887581a 1-20,22-54
+index.html
+  s_126b20a755b0d0::t_8247f3fc94452e 2,7-10,17
+src/styles/global.css
+  s_126b20a755b0d0::t_683d8e255d488c 114-120,137-160
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.39-trip",
+  "base_commit_sha": "d79293810b518fdaac898c631b2de7b5aa5a6a73",
+  "prompts": {},
+  "sessions": {
+    "s_126b20a755b0d0": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "7a6b4ac1-0fd8-4621-afa3-b0516554c476",
+        "model": "default"
+      },
+      "human_author": "yangshengming <shengmingyang@trip.com>"
+    }
+  }
+}
