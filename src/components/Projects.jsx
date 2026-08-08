@@ -1,10 +1,11 @@
 import { useEffect, useId, useState } from 'react'
 import { createPortal } from 'react-dom'
+import { useLocale } from '../i18n/LocaleContext.jsx'
 
-function ProjectTech({ tech }) {
+function ProjectTech({ tech, ariaLabel }) {
   if (!tech?.length) return null
   return (
-    <ul className="project-tech" aria-label="技术栈">
+    <ul className="project-tech" aria-label={ariaLabel}>
       {tech.map((item) => (
         <li key={item}>{item}</li>
       ))}
@@ -12,9 +13,9 @@ function ProjectTech({ tech }) {
   )
 }
 
-function ProjectShot({ project, float, onPreview }) {
+function ProjectShot({ project, float, onPreview, labels }) {
   if (!project.image) return null
-  const alt = project.imageAlt || `${project.name} 截图`
+  const alt = project.imageAlt || labels.shotAlt(project.name)
   const classes = [
     'project-shot',
     project.imageWide ? 'is-wide' : '',
@@ -36,7 +37,7 @@ function ProjectShot({ project, float, onPreview }) {
             wide: Boolean(project.imageWide),
           })
         }
-        aria-label={`预览 ${project.name} 截图`}
+        aria-label={labels.previewAria(project.name)}
       >
         <img src={project.image} alt={alt} loading="lazy" />
       </button>
@@ -55,7 +56,7 @@ function ProjectHighlights({ highlights }) {
   )
 }
 
-function ImageLightbox({ preview, closing, onClose, onAnimEnd, titleId }) {
+function ImageLightbox({ preview, closing, onClose, onAnimEnd, titleId, closeLabel }) {
   if (!preview) return null
 
   return createPortal(
@@ -74,7 +75,7 @@ function ImageLightbox({ preview, closing, onClose, onAnimEnd, titleId }) {
         type="button"
         className="image-lightbox-close"
         onClick={onClose}
-        aria-label="关闭预览"
+        aria-label={closeLabel}
       >
         ×
       </button>
@@ -93,6 +94,7 @@ function ImageLightbox({ preview, closing, onClose, onAnimEnd, titleId }) {
 }
 
 export default function Projects({ items }) {
+  const { t } = useLocale()
   const titleId = useId()
   const [preview, setPreview] = useState(null)
   const [closing, setClosing] = useState(false)
@@ -132,7 +134,7 @@ export default function Projects({ items }) {
 
   return (
     <section id="projects" className="section">
-      <h2 className="section-title">项目经历</h2>
+      <h2 className="section-title">{t.sections.projects}</h2>
       <div className="project-list">
         {items.map((project) => {
           const align = project.imageAlign
@@ -154,23 +156,32 @@ export default function Projects({ items }) {
 
               {align === 'highlights' ? (
                 <>
-                  <ProjectTech tech={project.tech} />
+                  <ProjectTech tech={project.tech} ariaLabel={t.projects.techAria} />
                   <p className="project-summary">{project.summary}</p>
                   <div className="project-highlights-wrap">
-                    <ProjectShot project={project} float onPreview={openPreview} />
+                    <ProjectShot
+                      project={project}
+                      float
+                      onPreview={openPreview}
+                      labels={t.projects}
+                    />
                     <ProjectHighlights highlights={project.highlights} />
                   </div>
                 </>
               ) : align === 'summary' ? (
                 <>
-                  <ProjectTech tech={project.tech} />
+                  <ProjectTech tech={project.tech} ariaLabel={t.projects.techAria} />
                   <div
                     className={`project-summary-row${
                       project.imageWide ? ' shot-wide' : ''
                     }`}
                   >
                     <p className="project-summary">{project.summary}</p>
-                    <ProjectShot project={project} onPreview={openPreview} />
+                    <ProjectShot
+                      project={project}
+                      onPreview={openPreview}
+                      labels={t.projects}
+                    />
                   </div>
                   <ProjectHighlights highlights={project.highlights} />
                 </>
@@ -181,11 +192,15 @@ export default function Projects({ items }) {
                   }`}
                 >
                   <div className="project-body">
-                    <ProjectTech tech={project.tech} />
+                    <ProjectTech tech={project.tech} ariaLabel={t.projects.techAria} />
                     <p className="project-summary">{project.summary}</p>
                     <ProjectHighlights highlights={project.highlights} />
                   </div>
-                  <ProjectShot project={project} onPreview={openPreview} />
+                  <ProjectShot
+                    project={project}
+                    onPreview={openPreview}
+                    labels={t.projects}
+                  />
                 </div>
               )}
             </article>
@@ -199,6 +214,7 @@ export default function Projects({ items }) {
         onClose={requestClose}
         onAnimEnd={finishClose}
         titleId={titleId}
+        closeLabel={t.projects.closePreview}
       />
     </section>
   )

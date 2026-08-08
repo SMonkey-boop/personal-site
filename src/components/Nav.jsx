@@ -1,25 +1,38 @@
-const links = [
-  { href: '#about', label: '关于' },
-  { href: '#skills', label: '能力' },
-  { href: '#experience', label: '工作' },
-  { href: '#projects', label: '项目' },
-  { href: '#edu', label: '教育' },
-  { href: '#contact', label: '联系' },
-]
+import { useLocale } from '../i18n/LocaleContext.jsx'
 
 export default function Nav({ name }) {
+  const { t, toggleLocale } = useLocale()
+  const links = [
+    { href: '#about', label: t.nav.about },
+    { href: '#skills', label: t.nav.skills },
+    { href: '#experience', label: t.nav.experience },
+    { href: '#projects', label: t.nav.projects },
+    { href: '#edu', label: t.nav.edu },
+    { href: '#contact', label: t.nav.contact },
+  ]
+
   return (
     <header className="site-header">
       <a className="site-logo" href="#about">
         {name}
       </a>
-      <nav className="site-nav" aria-label="页面导航">
-        {links.map((link) => (
-          <a key={link.href} href={link.href}>
-            {link.label}
-          </a>
-        ))}
-      </nav>
+      <div className="site-header-actions">
+        <nav className="site-nav" aria-label={t.navAria}>
+          {links.map((link) => (
+            <a key={link.href} href={link.href}>
+              {link.label}
+            </a>
+          ))}
+        </nav>
+        <button
+          type="button"
+          className="lang-switch"
+          onClick={toggleLocale}
+          aria-label={t.lang.aria}
+        >
+          {t.lang.switchTo}
+        </button>
+      </div>
     </header>
   )
 }

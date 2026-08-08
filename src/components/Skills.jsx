@@ -1,9 +1,13 @@
+import { useLocale } from '../i18n/LocaleContext.jsx'
+
 export default function Skills({ skills, stack }) {
+  const { t } = useLocale()
+
   return (
     <section id="skills" className="section">
-      <h2 className="section-title">能力</h2>
+      <h2 className="section-title">{t.sections.skills}</h2>
       <div className="card">
-        <ul className="stack-list" aria-label="技术关键词">
+        <ul className="stack-list" aria-label={t.skills.stackAria}>
           {stack.map((tag) => (
             <li key={tag}>{tag}</li>
           ))}

@@ -1,4 +1,4 @@
-import { profile } from './data/profile.js'
+import { useLocale } from './i18n/LocaleContext.jsx'
 import Nav from './components/Nav.jsx'
 import Hero from './components/Hero.jsx'
 import Skills from './components/Skills.jsx'
@@ -8,6 +8,8 @@ import Education from './components/Education.jsx'
 import Contact from './components/Contact.jsx'
 
 export default function App() {
+  const { profile } = useLocale()
+
   return (
     <div className="page">
       <div className="page-glow" aria-hidden="true" />

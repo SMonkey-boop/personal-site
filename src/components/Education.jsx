@@ -1,7 +1,11 @@
+import { useLocale } from '../i18n/LocaleContext.jsx'
+
 export default function Education({ education }) {
+  const { t } = useLocale()
+
   return (
     <section id="edu" className="section">
-      <h2 className="section-title">教育</h2>
+      <h2 className="section-title">{t.sections.edu}</h2>
       <div className="card edu-block">
         <p className="edu-school">
           {education.school}
@@ -13,7 +17,7 @@ export default function Education({ education }) {
         <p className="edu-meta">
           {education.period}
           <span className="edu-sep">·</span>
-          英语 {education.english}
+          {t.education.english} {education.english}
         </p>
       </div>
     </section>

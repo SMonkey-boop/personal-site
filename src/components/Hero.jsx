@@ -1,4 +1,8 @@
+import { useLocale } from '../i18n/LocaleContext.jsx'
+
 export default function Hero({ profile }) {
+  const { t } = useLocale()
+
   return (
     <section id="about" className="section hero">
       <div className="card hero-card reveal-up">
@@ -6,7 +10,7 @@ export default function Hero({ profile }) {
           <img
             className="hero-avatar"
             src={profile.avatar}
-            alt={`${profile.name}的头像`}
+            alt={t.hero.avatarAlt(profile.name)}
             width={497}
             height={640}
           />
@@ -16,10 +20,10 @@ export default function Hero({ profile }) {
             <p className="hero-tagline">{profile.tagline}</p>
             <div className="hero-actions">
               <a className="btn btn-primary" href="#experience">
-                工作经历
+                {t.hero.experience}
               </a>
               <a className="btn btn-ghost" href="#projects">
-                项目经历
+                {t.hero.projects}
               </a>
             </div>
           </div>

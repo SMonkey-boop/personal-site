@@ -1,7 +1,11 @@
+import { useLocale } from '../i18n/LocaleContext.jsx'
+
 export default function Experience({ items }) {
+  const { t } = useLocale()
+
   return (
     <section id="experience" className="section">
-      <h2 className="section-title">工作经历</h2>
+      <h2 className="section-title">{t.sections.experience}</h2>
       <div className="xp-list">
         {items.map((job) => (
           <article key={`${job.org}-${job.period}`} className="card xp-item">
